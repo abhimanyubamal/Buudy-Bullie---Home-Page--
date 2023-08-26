@@ -34,6 +34,7 @@
     --gap-52: 52px;
     --gap-63: 63px;
     --gap-80: 80px;
+    --gap-88: 88px;
     --gap-110: 110px;
     --gap-128: 128px;
     --gap-131: 131px;
@@ -66,7 +67,7 @@
     background-size: cover;
 }
 
-.font-size-14{
+.font-size-14 {
     font-size: var(--font-size-14);
 }
 
@@ -157,7 +158,14 @@
 }
 
 .svg-icon {
+    position: relative;
+    z-index: 2;
     width: 15% !important;
+    cursor: pointer;
+}
+
+.svg-icon:hover path{
+    fill: var(--background-color-tertiary);
 }
 
 .main-section-button {
@@ -346,9 +354,202 @@
     margin-bottom: 20px !important;
 }
 
-.background-svg{
+.background-svg {
     background-image: url("../images/background-svg.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+nav a:hover {
+    font-weight: var(--font-weight-700);
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+label {
+    height: 20px !important;
+    width: 20px !important;
+    position: relative;
+    background-image: url("../images/bat-with-raised-wings.png");
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+}
+
+.label-new-img {
+    background-image: url("../images/pumkin.png") !important;
+}
+
+@media (max-width: 1200px) {
+    .justify-center-xl {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .justify-center-lg {
+        justify-content: center;
+    }
+
+    .w-max-lg-75 {
+        width: 75% !important;
+    }
+
+    .w-max-lg-60 {
+        width: 60% !important;
+    }
+
+    .w-max-lg-100 {
+        width: 100% !important;
+    }
+
+    .menu {
+        background: linear-gradient(90deg, rgba(128, 128, 128, 0.473), rgba(255, 255, 255, 0.123));
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: all 400ms linear;
+    }
+
+    .menu a {
+        margin-right: 0 !important;
+    }
+
+    .show {
+        left: 0;
+    }
+
+    label {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+
+    .svg-1 {
+        left: 0;
+    }
+
+    .svg-2 {
+        left: 0;
+    }
+
+    .svg-3 {
+        left: 0;
+    }
+
+    .svg-light-1 {
+        left: 0;
+    }
+
+    .svg-light-2 {
+        left: 0;
+    }
+
+    .svg-light-3 {
+        left: 0;
+    }
+
+    .position-line {
+        left: 9.7%;
+    }
+
+    .w-max-md-100 {
+        width: 100% !important;
+    }
+
+    .w-max-md-40 {
+        width: 40% !important;
+    }
+}
+
+@media (max-width:576px) {
+    .col-max-sm-12{
+        width: 100% !important;
+    }
+
+    .text-max-sm-center{
+        text-align: center;
+    }
+
+    .max-sm-justify-center{
+        justify-content: center;
+    }
+
+    .m-max-sm-24{
+        margin-top: 24px !important;
+    }
+}
+
+@media (min-width: 1px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .w-lg-75 {
+        width: 75% !important;
+    }
+}
+
+.ellipse-1 {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.ellipse-2 {
+    position: absolute !important;
+    top: 2%;
+    right: 0;
+    z-index: 1;
+}
+
+.ellipse-3 {
+    position: absolute !important;
+    top: 42%;
+    left: 0;
+    z-index: 1;
+}
+
+.ellipse-4 {
+    position: absolute !important;
+    top: 56%;
+    right: 0;
+    z-index: 1;
+}
+
+footer a:hover {
+    font-weight: var(--font-weight-700);
 }
